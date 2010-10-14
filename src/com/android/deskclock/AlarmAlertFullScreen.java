@@ -49,7 +49,7 @@ public class AlarmAlertFullScreen extends Activity {
 
     // These defaults must match the values in res/xml/settings.xml
     private static final String DEFAULT_SNOOZE = "10";
-    private static final String DEFAULT_VOLUME_BEHAVIOR = "2";
+    private static final String DEFAULT_VOLUME_BEHAVIOR = "0";
     protected static final String SCREEN_OFF = "screen_off";
 
     protected Alarm mAlarm;
@@ -273,8 +273,8 @@ public class AlarmAlertFullScreen extends Activity {
                 return true;
             default:
                 break;
-        }
         return super.dispatchKeyEvent(event);
+        }
     }
 
     @Override
