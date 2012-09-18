@@ -162,10 +162,6 @@ public class FragmentTitle extends RelativeLayout {
     private boolean showOptionsMenu() {
         // Show overflow button?
         final Activity activity = (Activity)getContext();
-        boolean forceShowOverflow =
-                Settings.System.getInt(
-                        activity.getApplicationContext().getContentResolver(),
-                        Settings.System.UI_FORCE_OVERFLOW_BUTTON, 0) == 1;
-        return (!ViewConfiguration.get(getContext()).hasPermanentMenuKey() || forceShowOverflow);
+        return (!ViewConfiguration.get(getContext()).hasPermanentMenuKey());
     }
 }
